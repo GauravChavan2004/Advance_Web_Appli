@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exception Handling in AngularJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+        <h1>Error Handling</h1>
+        <div ng-controller="exceptionController">
+            <p>Enter a number: </p>
+            <input type="number" ng-model="num" />
+            <button ng-click="calculate()">Calculate</button>
+            <p>Sq. Root. Result: {{result}}</p>
+            <p>Any Exception: {{errorMessage}}</p>
+        </div>
+    </body>
+</html>

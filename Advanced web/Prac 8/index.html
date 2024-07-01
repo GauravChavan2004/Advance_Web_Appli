@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World with AngularJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script>
+            angular.module('myApp', [])
+                .controller('helloController', function ($scope) {
+                    $scope.message = 'Hello World';
+                    // Function to add an exclamation mark to the message
+                    $scope.addExclamation = function() {
+                        $scope.message += '!';
+                    };
+                    // Function to change the message to a different greeting
+                    $scope.changeGreeting = function() {
+                        $scope.message = 'Greetings, Universe!';
+                    };
+                });
+        </script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="helloController">
+            <input type="text" ng-model="message">
+            <p>{{message}}</p>
+            <button ng-click="addExclamation()">Add Exclamation</button>
+            <button ng-click="changeGreeting()">Change Greeting</button>
+        </div>
+    </body>
+</html>
